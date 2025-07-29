@@ -88,3 +88,5 @@ const CancelForm = ({ decorations, fetchDecorations }) => {
         </div>
     );
 };
+
+window.CancelForm = CancelForm;

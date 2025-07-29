@@ -48,3 +48,5 @@ const ProductList = ({ products, searchTerm, currentPage, setCurrentPage }) => {
         </div>
     );
 };
+
+window.ProductList = ProductList;

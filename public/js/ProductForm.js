@@ -94,3 +94,5 @@ const ProductForm = ({ fetchProducts }) => {
         </div>
     );
 };
+
+window.ProductForm = ProductForm;

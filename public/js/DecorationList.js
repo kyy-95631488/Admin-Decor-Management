@@ -31,3 +31,5 @@ const DecorationList = ({ decorations, products }) => {
         </div>
     );
 };
+
+window.DecorationList = DecorationList;

@@ -6,7 +6,7 @@
 ## Overview
 ![Admin Dashboard Preview](./assets/admin-overview.png)
 
-This project is a **responsive Admin Dashboard** built for managing products and decorations. It was developed as part of a pre-test interview to demonstrate proficiency in modern web development technologies, including **React**, **Tailwind CSS**, **Express.js**, and **MySQL**. The application allows users to manage products, track decoration purchases, cancel orders, and view product stock with a clean and intuitive interface.
+This project is a **responsive Admin Dashboard** built for managing products and decorations. It was developed as part of a pre-test interview to demonstrate proficiency in modern web development technologies, including **React**, **Tailwind CSS**, **Express.js**, and **MySQL**. The application allows users to manage products, track decoration purchases, cancel orders, view product stock with a clean and intuitive interface, and interact with a chatbot assistant powered by a simulated Gemini AI.
 
 ---
 
@@ -28,6 +28,7 @@ This project is a **responsive Admin Dashboard** built for managing products and
 - **Interactive UI**: Smooth animations, form validations, and user-friendly alerts using SweetAlert2.
 - **RESTful API**: Backend powered by Express.js with MySQL for data persistence.
 - **Real-time Data**: Fetches and updates product and decoration data dynamically.
+- **Chatbot Assistant**: Integrated chatbot for user assistance (simulated Gemini AI response).
 
 ---
 
@@ -61,6 +62,7 @@ task-test-1/
 │   │   ├── ProductForm.js   # Component for adding products
 │   │   ├── ProductList.js   # Component for listing products
 │   │   ├── Sidebar.js       # Sidebar navigation component
+│   │   ├── Chatbot.js       # Chatbot assistant component
 │   └── index.html           # Main HTML file
 ├── src/
 │   └── index.js             # Express.js server
@@ -84,15 +86,31 @@ Follow these steps to set up and run the project locally:
    npm install
    ```
 
-3. **Set Up MySQL Database**:
-   - Ensure MySQL is installed and running.
-   - Create a database named `decoration_db`.
-   - Run the SQL script provided in the project to create tables and seed initial data:
-     ```sql
-     source decoration_db.sql
+3. **Set Up Environment Variables**:
+   - Copy the `.env.example` file and rename it to `.env`:
+     ```bash
+     cp .env.example .env
      ```
+   - Open the `.env` file in a text editor and fill in the required environment variables, such as database credentials and API keys (if applicable). Example content:
+     ```env
+     GEMINI_API_KEY=your-api-key # If using external API, e.g., for chatbot
+     ```
+   - Ensure all required fields are filled correctly to avoid connection issues.
 
-4. **Configure Database Connection**:
+4. **Set Up MySQL Database**:
+   - Ensure MySQL is installed and running.
+   - Create a database named `decoration_db`:
+     ```sql
+     CREATE DATABASE decoration_db;
+     ```
+   - Import the SQL file into the database by running the following command inside the MySQL CLI:
+     ```sql
+     USE decoration_db;
+     SOURCE decoration_db.sql;
+     ```
+   - Alternatively, you can manually execute the SQL queries from the `decoration_db.sql` file using your preferred MySQL client (e.g., MySQL Workbench or phpMyAdmin).
+
+5. **Configure Database Connection**:
    - Update the database configuration in `src/index.js` with your MySQL credentials:
      ```javascript
      const db = mysql.createConnection({
@@ -103,12 +121,12 @@ Follow these steps to set up and run the project locally:
      });
      ```
 
-5. **Start the Backend Server**:
+6. **Start the Backend Server**:
    ```bash
    npm run dev
    ```
 
-6. **Access the Application**:
+7. **Access the Application**:
    - Open `http://localhost:3000` in your browser to view the dashboard.
 
 ---
@@ -162,5 +180,8 @@ CREATE TABLE pembelian (
 
 ### Decoration Management
 ![Decoration Management](./assets/dekorasi-managemen.png)
+
+### Chatbot Interface
+![Chatbot](./assets/chatbot-interface.png)
 
 ---

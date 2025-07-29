@@ -111,3 +111,5 @@ const DecorationForm = ({ products, fetchDecorations, fetchProducts }) => {
         </div>
     );
 };
+
+window.DecorationForm = DecorationForm;

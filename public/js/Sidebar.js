@@ -38,3 +38,5 @@ const Sidebar = ({ setActiveSection, isSidebarOpen, toggleSidebar }) => {
         </div>
     );
 };
+
+window.Sidebar = Sidebar;
