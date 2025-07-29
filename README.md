@@ -182,6 +182,6 @@ CREATE TABLE pembelian (
 ![Decoration Management](./assets/dekorasi-managemen.png)
 
 ### Chatbot Interface
-![Chatbot](./assets/chatbot-interface.png)
+![Chatbot](./assets/chatbot-gemini.png)
 
 ---
