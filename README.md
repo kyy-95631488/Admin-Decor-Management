@@ -168,6 +168,7 @@ CREATE TABLE pembelian (
 - **POST /api/decorations**: Record a new decoration purchase and reduce stock.
 - **DELETE /api/decorations/:id**: Cancel a decoration purchase and restore stock.
 - **GET /api/decorations**: Retrieve all decoration purchase records.
+- **POST /api/chat**: Handle chat requests by sending them to the Gemini API.
 
 ---
 
