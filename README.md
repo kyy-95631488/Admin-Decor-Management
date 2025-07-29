@@ -18,7 +18,6 @@ This project is a **responsive Admin Dashboard** built for managing products and
 - [Database Schema](#database-schema)
 - [API Endpoints](#api-endpoints)
 - [Screenshots](#screenshots)
-- [License](#license)
 
 ---
 
